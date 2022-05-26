@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classlist</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: rgb(255, 184, 137);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active{
+            background-color: rgb(21, 255, 0);
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <script>
+
+        // const box_1 = document.querySelector('.box:first-child');
+        // const boxAll = document.querySelectorAll('.box')
+        
+        // box_1.classList.add('active');
+        // => 선택자.classList.add(클래스명);
+        // => 선택자에 원하는 클래스를 추가 시킬 수 있음
+        
+       
+        // boxAll[1].classList.remove('box');
+        // => 선택자.classList.remove(클래스명);
+        // => 선택자에 원하는 클래스를 제거할 수 있음
+
+        // box_1.classList.toggle('active')
+        // => toggle은 add+remove를 동시에 사용
+        // => 클래스가 없으면 추가, 있으면 삭제
+
+
+        const boxAll = document.querySelectorAll('.box')
+
+        // boxAll.classList.toggle('active');
+
+        for(let i = 0; i < boxAll.length; i++){
+            boxAll[i].classList.add('active')
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
