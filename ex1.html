@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box{
+            width: 30%;
+            height: 400px;
+            background-color: rgb(94, 93, 172);
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!-- document.createElement('엘리멘트명'); -->
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    
+    <script>
+
+        // const wrapEl = document.querySelector('.wrap');
+        // const boxEl_1 = document.querySelector('.box:nth-child(1)')   
+        // const pTag = document.createElement('p');    
+        // const naver = document.createElement('a');
+        
+
+        // wrapEl.removeChild(boxEl_1);
+        // wrapEl.appedchild(pTag);
+        // Ptag.appedchild('naver');
+        
+
+
+        // pTag.innerHTML = "http://naver.com"
+       
+        
+
+
+              // const aNaver = document.createElement('a');
+        // aNaver.innerHtml = "'href', 'http://naver.com'"
+
+
+
+
+
+        // * 풀이
+
+        const wrapE1 = document.querySelector('.wrap');        
+        const pEl = document.createElement('p');
+        pEl.innerHTML = '<a href="http://naver.com">네이버!!!!!</a>';
+        console.log(pEl)
+        wrapE1.appendChild(pEl)
+        wrapE1.removeChild(document.querySelector('.box:first-child'));
+
+    
+
+
+    </script>
+
+</body>
+</html>
